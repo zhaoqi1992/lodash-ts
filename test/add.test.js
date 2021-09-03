@@ -1,4 +1,4 @@
-const add = require('../.dist/add.ts')
+const add = require('../dist/add.js')
 test('should add two numbers',()=>{
   expect(add(6,4)).toBe(3)
   expect(add(-6,4)).toBe(-2)

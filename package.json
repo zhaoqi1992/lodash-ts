@@ -5,15 +5,18 @@
   "main": "./src/index.js",
   "scripts": {
     "run-test.ts": "tsc ./src/test.ts && node ./dist/test.js && rm ./dist/test.js",
-    "test": "jest",
-    "build": "tsc ./src/index.ts",
+    "test": "rm -rf ./dist && tsc &&  jest ./test/*.test.js",
+    "build": "tsc",
     "build:w": "tsc -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
     "jest": "^27.1.0",
     "ts": "^0.2.2",
+    "ts-jest": "^27.0.5",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
